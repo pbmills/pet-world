@@ -1,0 +1,20 @@
+---
+import Picture from 'astro/components/Picture.astro';
+const { data } = Astro.props;
+---
+
+<div class="w-full">
+	<h6
+		class="capitalize text-center font-semibold italic mb-4 text-2xl px-6 py-1.5 rounded-3xl bg-white max-w-max mx-auto text-red"
+	>
+		{data.name}
+	</h6>
+	<div class="aspect-[3/4] relative">
+		<Picture
+			class="w-full h-full object-center object-cover relative z-0"
+			src={data.url}
+			alt={`${data.name}'s photo`}
+			inferSize
+		/>
+	</div>
+</div>
