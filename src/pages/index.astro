@@ -2,46 +2,32 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
+import pet1 from '../images/uno.jpg';
+import pet2 from '../images/dos.jpeg';
+import pet3 from '../images/tres.jpg';
+import pet4 from '../images/four.jpg';
+import pet5 from '../images/five.jpg';
+
 const pets = [
 	{
-		name: 'bruno',
-		url: 'https://images.unsplash.com/photo-1591946614720-90a587da4a36?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		name: 'doggo',
+		url: pet1,
 	},
 	{
-		name: 'pogo',
-		url: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-	},
-	{
-		name: 'tuffy',
-		url: 'https://images.unsplash.com/photo-1505628346881-b72b27e84530?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		name: 'pancake',
+		url: pet2,
 	},
 	{
 		name: 'kitty',
-		url: 'https://images.unsplash.com/photo-1455970022149-a8f26b6902dd?q=80&w=1904&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		url: pet3,
 	},
 	{
-		name: 'katty',
-		url: 'https://images.unsplash.com/photo-1494256997604-768d1f608cac?q=80&w=2129&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		name: 'lazy',
+		url: pet4,
 	},
 	{
-		name: 'bruno',
-		url: 'https://images.unsplash.com/photo-1591946614720-90a587da4a36?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-	},
-	{
-		name: 'pogo',
-		url: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-	},
-	{
-		name: 'tuffy',
-		url: 'https://images.unsplash.com/photo-1505628346881-b72b27e84530?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-	},
-	{
-		name: 'kitty',
-		url: 'https://images.unsplash.com/photo-1455970022149-a8f26b6902dd?q=80&w=1904&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-	},
-	{
-		name: 'katty',
-		url: 'https://images.unsplash.com/photo-1494256997604-768d1f608cac?q=80&w=2129&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		name: 'annoying',
+		url: pet5,
 	},
 ];
 
@@ -56,7 +42,7 @@ for (let i = 0; i < pets.length; i += 5) {
 		<div class="w-full max-w-600 mx-auto px-8 md:px-20 xl:px-0 py-12 xl:py-24">
 			<!-- Mobile Grid -->
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-y-16 xl:hidden xl:invisible">
-				{pets.map((pet: { name: string; url: string }) => <Card data={pet} />)}
+				{pets.map((pet: { name: string; url: ImageMetadata }) => <Card data={pet} />)}
 			</div>
 			<!-- Desktop Grid -->
 			<div class="w-full max-xl:hidden max-xl:invisible space-y-12">
